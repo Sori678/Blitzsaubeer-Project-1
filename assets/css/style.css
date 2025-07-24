@@ -309,6 +309,19 @@ input {
 #plz:focus:invalid~.fa-xmark {
     visibility: visible;
 }
+/* Privacy */
+#datenschutzerklärung,
+#impressum {
+display:grid;
+grid-template-columns: 1fr;
+width: 90%;
+justify-self: center;
+justify-items: center;
+}
+#privacy {
+    display: block;
+    width: 100%;
+}
 
 /* Footer */
 footer {
