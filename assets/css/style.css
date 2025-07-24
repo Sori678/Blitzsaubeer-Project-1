@@ -21,7 +21,8 @@
 body {
     height: 100vh;
     width: 100%;
-    font-size: 14px;
+    text-align: center;
+    font-size: 16px;
 }
 
 /* Main */
@@ -87,16 +88,15 @@ nav label {
     display: grid;
     grid-template-columns: 1fr;
     margin-top: 5px;
-    text-align: center;
-    font-size: 14px;
+    text-align: center; 
     width: 100%;
-    height: auto;
-    max-height: 500px;
+    height: 350px;
     background-image: url(../images/home-image-small.jpg);
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
     color: var(--primary-color);
+    overflow: auto;
     border-radius: 5px;
 }
 
@@ -153,6 +153,161 @@ nav label {
     color: var(--primary-color);
     margin-bottom: 10px;
     transition: transform 0.3s ease, color 0.3 ease;
+}
+
+  /* Services price section */
+.services-price {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    height: auto;
+}
+.container2 {
+    display: grid;
+    height: auto;
+    place-content: center;
+}
+.service-item {
+    display: grid;
+    grid-template-columns: 1fr;
+    border: 1px solid var(--primary-color);
+    background-color: var(--fourth-color);
+    height: auto;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+.price-content {
+    display: grid;
+    align-content: space-between;
+    width: 100%;
+    height: auto;
+    max-height: 350px;
+    overflow: auto;
+
+}
+.card1-img-top1 {
+    height: auto;
+    max-height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+details {
+    place-items: center;
+    height: auto;
+    width: 100%;
+}
+summary {
+    list-style: none;
+}
+.inf {
+    margin-bottom: 20px;
+    font-size: 25px;
+    color: var(--third-color);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.inf1 {
+    border: 1px solid var(--secondary-color);
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    padding: 5px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    margin: 5px;
+}
+.inf1:hover,
+.btn:hover,
+.inf:hover {
+    transform: scale(1.2);
+    background-color: yellow;
+    color: var(--fourth-color);
+}
+.table tr,
+.table th,
+.table td {
+    border: 1px solid var(--primary-color);
+    background-color: var(--secondary-color);
+    font-weight: bold;
+    text-align: left;
+    margin: 0;
+    width: 100%;
+    padding-left: 3px;
+}
+/* Form Section */
+#contact-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-content: center;
+    width: 100%;
+}
+.form-container,
+.select-options {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-content: center;
+    width: 100%;
+}
+.wrrap-in {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-content: center;
+    position: relative;
+    width: 100%;
+}
+input[type="text"]:valid,
+input[type="tel"]:valid,
+input[type="email"]:valid,
+input[type="datetime-local"]:valid,
+select[id="stadt"]:valid,
+select[id="dienstleistungen"]:valid,
+select[id="monatspaket"]:valid,
+textarea[id="anfrage"] {
+    margin-bottom: 10px;
+    border: 1px solid;
+    border-color: green;
+}
+input[type="text"]:invalid,
+input[type="tel"]:invalid,
+input[type="email"]:invalid,
+input[type="datetime-local"]:invalid,
+select[id="stadt"]:invalid,
+select[id="dienstleistungen"]:invalid,
+select[id="monatspaket"]:invalid {
+    margin-bottom: 10px;
+    border: 1px solid;
+    border-color: red;
+}
+input {
+    text-indent: 0.3em;
+}
+
+#zeit {
+    font-weight: bold;
+    font-size: large;
+}
+.fa-check,
+.fa-xmark {
+    display: block;
+    visibility: hidden;
+    position: absolute;
+    right: 10px;
+    margin-top: 33px;
+}
+#vorname:valid~.fa-check,
+#nachname:valid~.fa-check,
+#email:valid~.fa-check,
+#telefon:valid~.fa-check,
+#strasse:valid~.fa-check,
+#plz:valid~.fa-check {
+    visibility: visible;
+}
+#vorname:focus:invalid~.fa-xmark,
+#nachname:focus:invalid~.fa-xmark,
+#email:focus:invalid~.fa-xmark,
+#telefon:focus:invalid~.fa-xmark,
+#strasse:focus:invalid~.fa-xmark,
+#plz:focus:invalid~.fa-xmark {
+    visibility: visible;
 }
 
 /* Footer */
@@ -217,6 +372,10 @@ footer {
 
 @media screen and (min-width: 576px) and (max-width: 768px) {
 
+    /* Body */
+    body {
+        font-size: 19px;
+    }
     /* Header */
     #menu {
         display: none;
@@ -239,7 +398,12 @@ footer {
         height: 350px;
         object-fit: cover;
     }
-
+      /* Service price section */
+    
+    .card1-img-top1 {
+        height: 300px;
+    }
+    /* Footer */
     footer {
         grid-template-columns: 1fr 1fr;
         justify-items: center;
@@ -249,7 +413,11 @@ footer {
 
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
-
+    /* Body */
+    body {
+        font-size: 19px;
+    }
+    
     /* header */
     nav label {
         display: none;
@@ -268,9 +436,23 @@ footer {
 
     .container1 {
         grid-template-columns: 1fr 1fr;
-        font-size: 16px;
+       
     }
-
+    /* Services price */
+    
+    .container2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        justify-content: space-between;
+        gap: 20px;
+    }
+       .price-content {
+        height: 290px;
+    }
+        .card1-img-top1 {
+        height: 300px;
+    }
 
     /* footer */
     footer {
@@ -293,7 +475,10 @@ footer {
 }
 
 @media screen and (min-width: 992px) {
-
+    /* Body */
+    body {
+        font-size: 19px;
+    }
     /* navbar */
     nav label {
         display: none;
@@ -317,6 +502,52 @@ footer {
         height: 400px;
     }
 
+     /* Service price section */
+    .container2 {
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .price-content {
+        height: 350px;
+    }
+
+    .card1-img-top1 {
+        height: 300px;
+    }
+
+         /* Form section */
+    .form-container {
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 10px;
+    }
+
+    .wrrap-in~#vorname,
+    .wrrap-in~#telefon,
+    .wrrap-in~#stadt,
+    .wrrap-in~#zeit {
+        grid-column: 1;
+    }
+
+    .wrrap-in~#nachname,
+    .wrrap-in~#strasse,
+    .wrrap-in~#dienstleistungen,
+    .btn {
+        grid-column: 2;
+    }
+
+    .wrrap-in~#email,
+    .wrrap-in~#plz,
+    .wrrap-in~#monatspaket,
+    #anfrage {
+        grid-column: 3;
+    }
+
+    #anfrage {
+        width: auto;
+        height: 50px;
+    }
     /* Footer */
     footer {
         grid-template-columns: 1fr 1fr 1fr;
@@ -340,6 +571,10 @@ footer {
 
 }
 @media screen and (min-width: 1200px) {
+    /* Body */
+    body {
+        font-size: 20px;
+    }
      /* navbar */
     nav label {
         display: none;
