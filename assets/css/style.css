@@ -1,5 +1,5 @@
 /* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
 /* wildcard selectors */
 * {
@@ -24,6 +24,12 @@ body {
     font-size: 18px;
 }
 
+/* Main */
+main {
+    place-self: center;
+    width: 90%;
+}
+
 /* Header */
 nav {
     display: flex;
@@ -36,10 +42,12 @@ nav {
     width: 100%;
     font-family: var(--primary-font);
 }
+
 #logo {
     width: 70px;
-   border-radius: 5px;
-} 
+    border-radius: 5px;
+}
+
 #menu {
     gap: 20px;
 }
@@ -54,7 +62,9 @@ ul {
     flex: 100%;
 }
 
-
+nav label {
+    margin-left: auto;
+}
 
 #menu a {
     text-decoration: none;
@@ -70,4 +80,225 @@ ul {
 
 #nav-toggle {
     display: none;
+}
+/* Welcome section */
+.welcome {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 5px;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    background-image: url(../images/home-image-small.jpg);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--primary-color);
+    border-radius: 5px;
+}
+/* Services card section */
+#services-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    padding-top: 10px;
+}
+.container1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    gap: 10px;
+}
+.card-left,
+.card-right {
+    display: block;
+    border: none;
+    border-radius: 7px;
+    margin-bottom: 10px;
+    height: auto;
+    width: 100%;
+    background-color: var(--fourth-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-left:hover,
+.card-right:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.card1-img-top {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    border-radius: 7px 7px 0 0;
+}
+.btn {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, color 0.3 ease;
+}
+
+/* Footer */
+footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-self: center;
+    justify-items: center;
+    padding: 10px;
+    gap: 10px;
+    width: 90%;
+    height: auto;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    font-family: var(--secondary-font);
+    border-radius: 4px;
+}
+.contact,
+#daten,
+.opening-times {
+    display: block;
+}
+
+#daten a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: large;
+    font-weight: bold;
+    transition: transform 0.3s ease color 0.3 ease-in-out;
+}
+
+#daten a:hover {
+    color: yellow;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-links i {
+    color: var(--primary-color);
+    transition: transform 0.3 ease, color 0.3s ease;
+}
+
+.social-links i:hover {
+    transform: scale(1.2);
+    color: yellow;
+}
+
+
+
+/* Media queris */
+@media screen and (min-width: 0px) and (max-width: 576px) {
+
+    /* Header */
+    #menu {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    /* Header */
+    #menu {
+        display: none;
+    }
+    /* Welcome section */
+    .welcome {
+        background-image: url(../images/home-image.jpg);
+        height: 350px;
+    }
+
+      /* Services card section */
+    .card1-img-top {
+        height: 350px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+   /* header */
+    nav label {
+        display: none;
+    }
+        /* Welcome section */
+    .welcome {
+        background-image: url(../images/home-image.jpg);
+        height: 400px;
+    }
+
+      /* Services card */
+    .card1-img-top {
+        height: 400px;
+    }
+
+      /* footer */
+    footer {
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: center;
+        padding-left: auto;
+    }
+
+    .contact {
+        grid-column: 1;
+    }
+
+    #daten {
+        grid-column: 2;
+    }
+
+    .opening-times {
+        grid-column: 3;
+    }
+
+}
+
+@media screen and (min-width: 992px) {
+
+    /* navbar */
+    nav label {
+        display: none;
+    }
+
+    /* Welcome section */
+    .welcome {
+        background-image: url(../images/home-image.jpg);
+        height: 500px;
+    }
+        /* service card */
+    .container1 {
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-between;
+        gap: 50px;
+    }
+
+    .card1-img-top {
+        max-height: 400px;
+    }
+     /* Footer */
+    footer {
+        grid-template-columns: 1fr 1fr 1fr;
+
+
+    }
+
+    .contact {
+        grid-column: 1;
+        
+    }
+
+    #daten {
+        grid-column: 2;
+       
+    }
+
+    .opening-times {
+        grid-column: 3;
+        
+    }
+
 }
