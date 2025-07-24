@@ -23,3 +23,20 @@ body {
     width: 100%;
     font-size: 18px;
 }
+
+/* Header */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: auto;
+    background-color: var(--secondary-color);
+    padding: 20px;
+    width: 100%;
+    font-family: var(--primary-font);
+}
+#logo {
+    width: 70px;
+   border-radius: 5px;
+} 
