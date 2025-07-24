@@ -1,2 +1,25 @@
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap'); 
+
+/* wildcard selectors */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* CSS Variables */
+:root {
+    --primary-font: "Josefin Sans", sans-serif;
+    --secondary-font: "Inter", sans-serif;
+    --primary-color: #333333;
+    --secondary-color: #00bcd4;
+    --third-color: #004c99;
+    --fourth-color: #66bb6a;
+}
+
+/* Global Style*/
+body {
+    height: 100vh;
+    width: 100%;
+    font-size: 18px;
+}
