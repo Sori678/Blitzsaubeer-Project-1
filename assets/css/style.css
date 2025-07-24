@@ -322,6 +322,17 @@ justify-items: center;
     display: block;
     width: 100%;
 }
+/* About */
+#about {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 90%;
+    justify-self: center;
+}
+.about {
+    height: 400px;
+    width: 100%;
+}
 
 /* Footer */
 footer {
