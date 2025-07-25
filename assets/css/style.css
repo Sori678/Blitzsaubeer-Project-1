@@ -53,7 +53,8 @@ nav {
     gap: 20px;
 }
 
-ul {
+ul,
+ol {
     list-style: none;
 }
 
@@ -147,7 +148,6 @@ nav label {
     max-height: 300px;
     border-radius: 7px 7px 0 0;
 }
-
 .btn {
     background-color: var(--secondary-color);
     color: var(--primary-color);
@@ -277,7 +277,8 @@ select[id="monatspaket"]:invalid {
     border: 1px solid;
     border-color: red;
 }
-input {
+input,
+textarea {
     text-indent: 0.3em;
 }
 
@@ -344,7 +345,40 @@ justify-items: center;
 .carousel-item {
     border-radius: 3px;
 }
-
+/* FAQ */
+#feedback-form {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.faq-img {
+    display: grid;
+    width: 100%;
+    object-fit: cover;
+    margin: 10px 0;
+}
+.feedback {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 10px;
+}
+.feedback-div {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.buton {
+    background-color: #00bcd4;
+    border: none;
+    width: auto;
+    margin: 10px 0;
+    border-radius: 3px;
+    transition: transform 0.3 s ease color 0.3s ease-in-out;
+}
+.buton:hover {
+    transform: scale(1.1);
+    background-color: yellow;
+    color: var(--secondary-color);
+}
 /* Footer */
 footer {
     display: grid;
@@ -392,7 +426,13 @@ footer {
     transform: scale(1.2);
     color: yellow;
 }
-
+.Time, 
+tr, 
+th, 
+td {
+    border: 1px solid var(--primary-color);
+    padding: 10px;
+}
 
 
 /* Media queris */
@@ -498,7 +538,15 @@ footer {
     width: auto;
    }
    
-
+   /* FAQ */
+   .feedback-div {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+   }
+    .buton {
+    width: 150px;
+    justify-self: center;
+   }
     /* footer */
     footer {
         grid-template-columns: 1fr 1fr 1fr;
@@ -603,6 +651,16 @@ footer {
    .carousel {
     width: auto;
    }
+   /* FAQ */
+   .feedback-div {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+   }
+   .buton {
+    width: 150px;
+    justify-self: center;
+   }
+   
     /* Footer */
     footer {
         grid-template-columns: 1fr 1fr 1fr;
