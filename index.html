@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
     <meta charset="UTF-8">
@@ -28,18 +28,30 @@
 <body class="min-vh-100">
     <!--Header-->
     <header>
-        <nav role="navigation" class="navbar-expand-md">
-            <a href="index.html" aria-label="Home"><img src="assets/images/blitzsauber-fav.png"
-                    alt="Lightning bolt divides a black and white background with the word Blitzsaubeer in a modern font, suggesting energy and cleanliness in a bold and dynamic style"
-                    id="logo"></a><br>
-            <input type="checkbox" id="nav-toggle" name="nav-toggle">
-            <label for="nav-toggle" class="nav-toggle"><i class="fa-solid fa-bars fa-2xl"
-                    style="color: #333333"></i></label>
-            <ul id="menu" class="navbar-nav ms-auto">
-                <li><a href="dienste-und-preis.html">Dienste und Preis</a></li>
-                <li><a href="über.html">Über</a></li>
-                <li><a href="faq.html" aria-label="Faq"><i class="fa-regular fa-circle-question fa-lg"></i></a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a href="index.html" aria-label="Home"><img src="assets/images/blitzsauber-fav.png"
+                        alt="Lightning bolt divides a black and white background with the word Blitzsaubeer in a modern font, suggesting energy and cleanliness in a bold and dynamic style"
+                        id="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="dienste-und-preis.html">Dienste und Preis</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="über.html">Über</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="faq.html" aria-label="Faq"><i
+                                    class="fa-regular fa-circle-question fa-lg"></i></a>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -51,7 +63,8 @@
                 <h1>Willkommen bei Blitzsauber</h1>
                 <p>
                     Blitzsauber steht für Qualität, Vertrauen und zuverlässige Reinigung – seit über 5 Jahren.
-                    Unser engagiertes Team bietet Ihnen professionelle Reinigungsdienste für Haushalte, Büros und mehr.
+                    Unser engagiertes Team bietet Ihnen professionelle Reinigungsdienste für Haushalte, Büros und
+                    mehr.
                     Wussten Sie, dass ein sauberer Arbeitsplatz die Produktivität um bis zu <strong>20 %</strong>
                     steigern kann
                     und regelmäßige Reinigung die Lebensdauer Ihrer Möbel deutlich verlängert?
@@ -61,7 +74,9 @@
                     <strong>Wir sorgen für echte Sauberkeit, der Sie vertrauen können.</strong>
                 </p>
                 <a class="btn" href="dienste-und-preis.html#contact-form">Jetzt Leistungen entdecken</a>
+
             </div>
+
         </section>
         <!-- Services Section -->
         <section id="services-card">
@@ -69,7 +84,7 @@
                 <div class="card-left ">
                     <picture>
                         <source media="(max-width: 576px)" srcset="assets/images/house-card-small-2.jpg"
-                            class="card1-img-top" alt="home card small-2">
+                            class="card1-img-top">
                         <img src="assets/images/house-card.jpg" class="card1-img-top" alt="home card ">
                     </picture>
                     <div>
@@ -83,7 +98,7 @@
                 <div class="card-left ">
                     <picture>
                         <source media="(max-width: 576px)" srcset="assets/images/office-card-1-small-2.jpg"
-                            class="card1-img-top" alt="office card small">
+                            class="card1-img-top">
                         <img src="assets/images/office-card-1.jpg" class="card1-img-top" alt="office card">
                     </picture>
                     <div>
@@ -96,7 +111,7 @@
                 <div class="card-right ">
                     <picture>
                         <source media="(max-width: 576px)" srcset="assets/images/window-card-small-2.jpg"
-                            class="card1-img-top" alt="window photo small-2">
+                            class="card1-img-top">
                         <img src="assets/images/window-card.jpg" class="card1-img-top" alt="window photo">
                     </picture>
                     <div>
@@ -111,7 +126,7 @@
                 <div class="card-right ">
                     <picture>
                         <source media="(max-width: 576px)" srcset="assets/images/card-cleaning-small-2.jpg"
-                            class="card1-img-top" alt="card cleaning small-2">
+                            class="card1-img-top">
                         <img src="assets/images/card-cleaning.jpg" class="card1-img-top" alt="inside photo">
                     </picture>
                     <div>
@@ -169,13 +184,5 @@
     <!-- Kit Awesome -->
     <script src="https://kit.fontawesome.com/d72aa3ab2e.js" crossorigin="anonymous"></script>
 
-      <script>
-    const checkbox = document.getElementById("nav-toggle");
 
-    window.addEventListener("resize", () => {
-      if (window.innerWidth >= 768) {
-        checkbox.checked = false;
-      }
-    });
-  </script>
 </body>

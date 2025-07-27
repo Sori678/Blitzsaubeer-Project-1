@@ -32,25 +32,20 @@ main {
 }
 
 /* Header */
-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    height: auto;
+.navbar {
     background-color: var(--secondary-color);
     padding: 20px;
     width: 100%;
     font-family: var(--primary-font);
+    
 }
-
 #logo {
     width: 70px;
     border-radius: 5px;
 }
 
-#menu {
-    gap: 20px;
+.navbar-nav {
+    text-align: left;
 }
 
 ul,
@@ -58,31 +53,7 @@ ol {
     list-style: none;
 }
 
-#nav-toggle:checked~ul {
-    display: block;
-    background-color: transparent;
-    flex: 100%;
-}
 
-nav label {
-    margin-left: auto;
-}
-
-#menu a {
-    text-decoration: none;
-    color: var(--primary-color);
-    transition: color 0.3s ease-in-out;
-    font-weight: bold;
-    font-size: 20px;
-}
-
-#menu a:hover {
-    color: yellow;
-}
-
-#nav-toggle {
-    display: none;
-}
 
 /* Welcome section */
 .welcome {
@@ -100,6 +71,7 @@ nav label {
     overflow: auto;
     border-radius: 5px;
 }
+
 
 /* Services card section */
 #services-card {
@@ -152,7 +124,7 @@ nav label {
     background-color: var(--secondary-color);
     color: var(--primary-color);
     margin-bottom: 10px;
-    transition: transform 0.3s ease, color 0.3 ease;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
   /* Services price section */
@@ -366,13 +338,14 @@ justify-items: center;
     display: grid;
     grid-template-columns: 1fr;
 }
+
 .buton {
     background-color: #00bcd4;
     border: none;
     width: auto;
     margin: 10px 0;
     border-radius: 3px;
-    transition: transform 0.3 s ease color 0.3s ease-in-out;
+    transition: transform 0.3s ease, color 0.3s ease-in-out;
 }
 .buton:hover {
     transform: scale(1.1);
@@ -384,6 +357,7 @@ footer {
     display: grid;
     grid-template-columns: 1fr;
     justify-self: center;
+    justify-items: center;
     padding: 10px;
     gap: 10px;
     width: 90%;
@@ -397,7 +371,9 @@ footer {
 .contact,
 #daten,
 .opening-times {
-    margin-left: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
 }
 
 #daten a {
@@ -405,7 +381,7 @@ footer {
     color: var(--primary-color);
     font-size: large;
     font-weight: bold;
-    transition: transform 0.3s ease color 0.3 ease-in-out;
+    transition: transform 0.3s ease, color 0.3s ease-in-out;
 }
 
 #daten a:hover {
@@ -414,12 +390,13 @@ footer {
 
 .social-links {
     display: flex;
+    justify-content: center;
     gap: 20px;
 }
 
 .social-links i {
     color: var(--primary-color);
-    transition: transform 0.3 ease, color 0.3s ease;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .social-links i:hover {
@@ -439,10 +416,7 @@ td {
 @media screen and (min-width: 0px) and (max-width: 576px) {
 
     /* Header */
-    #menu {
-        display: none;
-    }
-
+   
 }
 
 @media screen and (min-width: 576px) and (max-width: 768px) {
@@ -452,10 +426,7 @@ td {
         font-size: 19px;
     }
     /* Header */
-    #menu {
-        display: none;
-    }
-
+    
     /* Welcome section */
     .welcome {
         background-image: url(../images/home-image.jpg);
@@ -478,11 +449,7 @@ td {
     .card1-img-top1 {
         height: 300px;
     }
-    /* Footer */
-    footer {
-        grid-template-columns: 1fr 1fr;
-        justify-items: center;
-    }
+  
 
 }
 
@@ -492,12 +459,9 @@ td {
     body {
         font-size: 19px;
     }
+    /* Header */
+     
     
-    /* header */
-    nav label {
-        display: none;
-    }
-
     /* Welcome section */
     .welcome {
         background-image: url(../images/home-image.jpg);
@@ -550,12 +514,13 @@ td {
     /* footer */
     footer {
         grid-template-columns: 1fr 1fr 1fr;
-        justify-items: center;
+        justify-content: space-between;
     }
-
     .contact {
         grid-column: 1;
+        justify-items: start;
     }
+    
 
     #daten {
         grid-column: 2;
@@ -572,11 +537,8 @@ td {
     body {
         font-size: 19px;
     }
-    /* navbar */
-    nav label {
-        display: none;
-    }
-
+   
+   
     /* Welcome section */
     .welcome {
         background-image: url(../images/home-image.jpg);
@@ -664,12 +626,11 @@ td {
     /* Footer */
     footer {
         grid-template-columns: 1fr 1fr 1fr;
-        justify-items: center;
+        justify-content: space-between;
     }
-
     .contact {
         grid-column: 1;
-
+        justify-items: start;
     }
 
     #daten {
@@ -688,11 +649,7 @@ td {
     body {
         font-size: 20px;
     }
-     /* navbar */
-    nav label {
-        display: none;
-    }
-
+   
     /* Welcome section */
     .welcome {
         background-image: url(../images/home-image.jpg);

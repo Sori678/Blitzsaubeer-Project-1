@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
     <meta charset="UTF-8">
@@ -28,18 +28,30 @@
 <body class="min-vh-100">
     <!--Header-->
     <header>
-        <nav role="navigation" class="navbar-expand-md">
-            <a href="index.html" aria-label="Home"><img src="assets/images/blitzsauber-fav.png"
-                    alt="Lightning bolt divides a black and white background with the word Blitzsaubeer in a modern font, suggesting energy and cleanliness in a bold and dynamic style"
-                    id="logo"></a><br>
-            <input type="checkbox" id="nav-toggle" name="nav-toggle">
-            <label for="nav-toggle" class="nav-toggle"><i class="fa-solid fa-bars fa-2xl"
-                    style="color: #333333"></i></label>
-            <ul id="menu" class="navbar-nav ms-auto">
-                <li><a href="dienste-und-preis.html">Dienste und Preis</a></li>
-                <li><a href="über.html">Über</a></li>
-                <li><a href="faq.html" aria-label="Faq"><i class="fa-regular fa-circle-question fa-lg"></i></a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a href="index.html" aria-label="Home"><img src="assets/images/blitzsauber-fav.png"
+                        alt="Lightning bolt divides a black and white background with the word Blitzsaubeer in a modern font, suggesting energy and cleanliness in a bold and dynamic style"
+                        id="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="dienste-und-preis.html">Dienste und Preis</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="über.html">Über</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="faq.html" aria-label="Faq"><i
+                                    class="fa-regular fa-circle-question fa-lg"></i></a>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -144,13 +156,4 @@
     <!-- Kit Awesome -->
     <script src="https://kit.fontawesome.com/d72aa3ab2e.js" crossorigin="anonymous"></script>
 
-    <script>
-        const checkbox = document.getElementById("nav-toggle");
-
-        window.addEventListener("resize", () => {
-            if (window.innerWidth >= 768) {
-                checkbox.checked = false;
-            }
-        });
-    </script>
 </body>
