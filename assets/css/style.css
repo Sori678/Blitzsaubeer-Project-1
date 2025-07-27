@@ -37,23 +37,23 @@ main {
     padding: 20px;
     width: 100%;
     font-family: var(--primary-font);
-    
+    gap: 20px;
+    font-weight: bold;
 }
 #logo {
     width: 70px;
     border-radius: 5px;
 }
-
 .navbar-nav {
     text-align: left;
 }
-
+.nav-link:hover {
+    color: yellow;
+}
 ul,
 ol {
     list-style: none;
 }
-
-
 
 /* Welcome section */
 .welcome {
