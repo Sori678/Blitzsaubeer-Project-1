@@ -55,6 +55,8 @@ ol {
     list-style: none;
 }
 
+.nav-link[aria-current="page"] { text-decoration: underline; font-weight: 600; }
+
 /* Welcome section */
 .welcome {
     display: grid;
