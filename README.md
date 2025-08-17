@@ -15,7 +15,6 @@ A responsive static website for a fictional cleaning company, **Blitzsaubeer**. 
 - [Known Bugs](#known-bugs)
 - [Performance & SEO](#performance--seo)
 - [Deployment](#deployment)
-- [Local Development](#local-development)
 - [Credits](#credits)
 - [Future Enhancements](#future-enhancements)
 - [Resubmission Notes](#resubmission-notes)
