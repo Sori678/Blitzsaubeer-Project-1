@@ -21,6 +21,9 @@
 </head>
 
 <body class="min-vh-100">
+  <!-- Skip link (apare la focus) -->
+  <a href="#about" class="visually-hidden-focusable">Zum Inhalt springen</a>
+
   <!-- Header -->
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark">
@@ -76,14 +79,14 @@
           </div>
         </div>
 
-        <h4>Warum Blitzsauber?</h4>
+        <h2>Warum Blitzsauber?</h2>
         <ol>
           <li>Flexibilität &amp; Anpassung – wählen Sie zwischen einer einmaligen Reinigung oder einem monatlichen Abonnement mit attraktiven Preisen.</li>
           <li>Garantierte Qualität – wir verwenden umweltfreundliche Produkte und moderne Technologien für eine gründliche Reinigung.</li>
           <li>Geschultes &amp; zuverlässiges Personal – höchste Hygienestandards und ein angenehmes Arbeitsklima.</li>
         </ol>
 
-        <h4>Unsere Dienstleistungen</h4>
+        <h2>Unsere Dienstleistungen</h2>
         <p>Wir bieten eine Vielzahl von Reinigungsdiensten für Privat- und Geschäftskunden. Egal ob regelmäßige Büroreinigung, Fensterreinigung oder spezielle Anforderungen – wir passen uns Ihren Bedürfnissen an.</p>
       </div>
 
@@ -93,7 +96,7 @@
     </section>
 
     <div class="mt-3">
-      <h4>Haben Sie Fragen?</h4>
+      <h2 class="h4">Haben Sie Fragen?</h2>
       <p>Besuchen Sie unser FAQ, um Antworten auf häufig gestellte Fragen zu erhalten.</p>
       <a class="btn" href="faq.html" aria-label="Zu den häufigen Fragen">
         <i class="fa-regular fa-circle-question fa-lg" aria-hidden="true"></i>
@@ -122,10 +125,11 @@
     <div class="opening-times">
       <h3>Öffnungszeiten</h3>
       <table>
+        <caption class="visually-hidden">Öffnungszeiten – Montag bis Samstag</caption>
         <thead>
           <tr>
-            <th>Tag</th>
-            <th>Uhr</th>
+            <th scope="col">Tag</th>
+            <th scope="col">Uhr</th>
           </tr>
         </thead>
         <tbody>
@@ -144,3 +148,4 @@
   <script src="https://kit.fontawesome.com/d72aa3ab2e.js" crossorigin="anonymous"></script>
 </body>
 </html>
+
