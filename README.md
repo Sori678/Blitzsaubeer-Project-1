@@ -1,165 +1,216 @@
 # Blitzsaubeer-Project-1
-A responsive static website built for a fictional cleaning company called Blitzsaubeer. The website showcases services, builds trust with potential clients, and offers easy ways to contact the company. This is the first portfolio project for the Code Institute Full-Stack Developer Diploma.
+A responsive static website for a fictional cleaning company, **Blitzsaubeer**. The site showcases services, builds trust, and makes it easy to get in touch or book a service. Built as Portfolio Project 1 for the Code Institute Full-Stack Developer Diploma.
 
-## Table of Contents 
+## Table of Contents
+- [Live Project & Repository](#live-project--repository)
+- [Overview](#overview)
+- [User Stories](#user-stories)
+- [Features](#features)
+- [UX Design](#ux-design)
+- [Accessibility](#accessibility)
+- [Information Architecture](#information-architecture)
+- [Technologies Used](#technologies-used)
+- [Screenshots](#screenshots)
+- [Testing](#testing)
+- [Known Bugs](#known-bugs)
+- [Performance & SEO](#performance--seo)
+- [Deployment](#deployment)
+- [Local Development](#local-development)
+- [Credits](#credits)
+- [Future Enhancements](#future-enhancements)
+- [Resubmission Notes](#resubmission-notes)
 
-- [Overview]
-
-- [Features]
-
-- [UX Design]
-
-- [Technologies Used]
-
-- [Testing]
-
-- [Deployment]
-
-- [Credits]
+## Live Project & Repository
+- **Live Site:** https://Sori678.github.io/Blitzsaubeer-Project-1/
+- **Repository:** https://github.com/Sori678/Blitzsaubeer-Project-1
 
 ## Overview
-External User Goals:
+**External user goals**
+- Learn about services and prices
+- Build trust through clear visuals and content
+- Easily contact the company or submit a booking
 
-Learn about cleaning services and pricing
+**Site owner goals**
+- Present a professional, consistent brand
+- Attract and convert potential clients
+- Collect enquiries via validated forms
 
-Trust the company through clear visuals and testimonials
+## User Stories
+1. **First-time visitor:** I want to quickly understand what services are offered so I can decide if they fit my needs.  
+   **Acceptance:** Clear hero, “Unsere Leistungen” cards, link to full services.  
+   **Implemented by:** Home hero + service cards + CTA to Services.
 
-Easily contact the company or book a service
+2. **Price-conscious user:** I want indicative pricing so I can estimate my budget.  
+   **Acceptance:** Pricing visible or one click away; structured lists/tables.  
+   **Implemented by:** `dienste-und-preis.html` with expandable details and price lists.
 
-Site Owner Goals:
+3. **Potential client:** I want to submit a booking or question easily and get confirmation.  
+   **Acceptance:** Required fields; basic validation; confirmation page.  
+   **Implemented by:** Booking form (Services) and FAQ form, both route to `thank-you.html`.
 
-Attract clients and promote cleaning services
-
-Present a professional brand identity
-
-Gather client contact details for communication
+4. **Mobile user:** I want the site to be usable on my phone.  
+   **Acceptance:** Responsive layout, mobile nav, readable text.  
+   **Implemented by:** Grid layouts, responsive images, Bootstrap navbar.
 
 ## Features
-- Header & Navigation
-- Clear logo and name
+### Header & Navigation
+- Logo links to Home
+- Bootstrap 5 responsive navbar with toggler
+- Active page highlighting
 
-- Responsive navbar with active link highlight
+### Hero (Home)
+- Welcome copy with clear value proposition
+- Primary CTA to Services/Booking
 
-- Mobile menu toggle with hamburger icon
+### Services Cards (Home)
+- Responsive grid of four services
+- `<picture>` sources for smaller images on mobile
+- CTA buttons to booking section
 
-- Hero Section
-- Engaging image/banner
+### Services & Prices (`dienste-und-preis.html`)
+- Consistent service blocks: image + text + expandable details
+- `<details>/<summary>` used for pricing, benefits, tips
+- Booking form on the same page
 
-- Brief introduction to the company’s values
+### Forms
+- **Booking form** (Services) and **Question form** (FAQ)
+- Required fields, `email`/`tel` patterns, native browser validation
+- Visual feedback icons for valid/invalid states
+- Both submit via **GET** to `thank-you.html` (front-end only)
 
-- Services Section
-- Grid layout showcasing offered services
+### About (`uber.html`)
+- Company intro and values
+- Bootstrap carousel
+- CTA back to booking
 
-- Responsive design with icons and hover effects
+### FAQ (`faq.html`)
+- Intro text + simple contact form
 
-- Contact Form
-- Users can submit inquiries via email and phone
+### Footer
+- Contact details and social links (Font Awesome)
+- Legal links: Privacy & Impressum
+- Opening hours table
 
-- Form includes input validation with success checkmark icon
+### Legal
+- **Impressum:** `impressum.html`  
+- **Privacy Policy:** `datenschutzerklarung.html`
 
-- Footer
-- Social links (Font Awesome icons)
-
-- Legal links to Privacy Policy and Impressum
-
-# UX Design
-- Wireframes
-- Basic layout was planned for desktop and mobile.
-
-- Design Choices
-- Colors: Clean and calming tones (white/blue/green)
-
-## Typography: Readable sans-serif fonts
-
-- Icons: Font Awesome icons for clarity
+## UX Design
+- **Wireframes:** Basic layout planned for mobile and desktop.
+- **Design choices:** Calm, clean palette (white/cyan/green), generous spacing, readable type.
+- **Typography:** Google Fonts — Inter (body), Josefin Sans (headings).
+- **Icons:** Font Awesome.
 
 ## Accessibility
-- All images use meaningful alt text
+- Semantic HTML structure (headings, lists, tables)
+- All images include meaningful `alt` text
+- Interactive icons marked `aria-hidden="true"` when decorative
+- Labels tied to inputs via `for`/`id`, selects with clear labels
+- Visible focus styles (`:focus-visible`) across interactive elements
+- Table captions and appropriate scoping for headers
+- Sufficient color contrast maintained
 
-- Sufficient contrast for readability
+## Information Architecture
+**Pages**
+- `index.html` (Home)
+- `dienste-und-preis.html` (Services & Prices + Booking)
+- `uber.html` (About)
+- `faq.html` (FAQ + Contact form)
+- `impressum.html` (Legal notice)
+- `datenschutzerklarung.html` (Privacy policy)
+- `thank-you.html` (Submission confirmation)
 
-- Form uses label linked with input via for and id
+**Folders**
+assets/
+css/
+style.css
+images/
 
 ## Technologies Used
-- HTML5
-
-- CSS3
-
-- Google Fonts
-
-- Font Awesome
-
-- Git and GitHub for version control
-
-- Bootstrap 
-
-## Testing
-- HTML validated with W3C Validator
-
-- CSS validated with Jigsaw Validator
-
-- Manual testing done on:
-
-- Chrome, Firefox, Edge
-
-- Mobile (iOS/Android)
-
-- Media queries tested at:
-
-- 320px (small phones)
-
-- 768px (tablets)
-
-- 1024px+ (desktops)
-
-## Known Bugs
-- None at this time
-
-## Deployment
-- Project deployed on GitHub Pages
-
-- Repository: GitHub - Blitzsaubeer
-
-- To clone this repository:
-
-- git clone https://github.com/Sori678/Blitzsaubeer-Project-1.git
-
-## Credits
-- Layout and responsiveness inspired by [Code Institute lessons]
-
-- Icons: Font Awesome
-
-- Images: Free commercial-use images from [Unsplash / Pexels]
+- HTML5, CSS3
+- Bootstrap 5 (CDN)
+- Google Fonts (Inter, Josefin Sans)
+- Font Awesome (icons)
+- Git & GitHub for version control and hosting
 
 ## Screenshots
+**Home**
+- `assets/images/Screenshot-navbar-mobile.png`  
+- `assets/images/Screenshot-navbar-homepage-desktop.png`  
+- `assets/images/Screenshot-footer-mobile.png`  
+- `assets/images/Screenshot-footer-service-card-desktop.png`
+
+**Services**
+- `assets/images/Screenshot-service-reservation-desktop.png`  
+- `assets/images/Screenshot-service-reservation-mobile.png`
+
+**About**
+- `assets/images/Screenshot-carousel-desktop.png`  
+- `assets/images/screenshot-carousel-mobile.png`
+
+**FAQ**
+- `assets/images/Screenshot-faq-form-mobile.png`  
+- `assets/images/Screenshot-faq-form-desktop.png`
+
+**Confirmation**
+- `assets/images/confirmation-small.png`  
+- `assets/images/confirmation-big.png`
+> Ensure the file names above exactly match files in the repo (case-sensitive on GitHub Pages).
+
+## Testing
+### Validators
+- **HTML:** W3C Nu Validator — no errors on all pages  
+  Evidence in: `assets/validation/html/`
+- **CSS:** W3C Jigsaw — no errors  
+  Evidence in: `assets/validation/css/`
+
+### Manual Test Matrix
+| Area             | Test                                                  | Result |
+|------------------|-------------------------------------------------------|--------|
+| Navbar           | Mobile toggler opens/closes; links navigate correctly | Pass   |
+| Active link      | Current page highlighted in nav                       | Pass   |
+| Hero CTA         | Button navigates to Services/Booking                  | Pass   |
+| Services details | `summary` toggles via mouse and keyboard              | Pass   |
+| Forms required   | Submitting empty form shows native validation         | Pass   |
+| Email pattern    | Invalid email prevented                               | Pass   |
+| Tel pattern      | Invalid phone prevented                               | Pass   |
+| Visual icons     | Valid/invalid icons update as fields change           | Pass   |
+| Thank-you        | Forms redirect to `thank-you.html` (GET)              | Pass   |
+| Footer links     | Social open in new tab; legal pages accessible        | Pass   |
+| Images           | `<picture>` sources swap on narrow widths             | Pass   |
+| Focus            | Keyboard focus visible                                | Pass   |
+
+### Responsive Checks
+- Chrome DevTools & real devices at 320px, 375px, 768px, 1024px, 1440px — layout holds as intended.
+
+> Optional: add Lighthouse screenshots in `assets/validation/lighthouse/`.
+
+## Known Bugs
+- None observed after validation and manual testing.
+
+## Performance & SEO
+- Responsive images using `<picture>` where applicable
+- Minimal render-blocking: single CSS file and Bootstrap CDN
+- Per-page `<meta name="description">`
+- Descriptive headings and link text
+- Lighthouse evidence can be added to `assets/validation/lighthouse/`
 
 
-### Home Page 
-![Screenshots of home page](assets/images/Screenshot-navbar-mobile.png)
-![Screenshots of home page](assets/images/Screenshot-navbar-homepage-desktop.png)
-![Screenshots of home page](assets/images/Screenshot-footer-mobile.png)
-![Screenshots of home page](assets/images/Screenshot-footer-service-card-desktop.png)
+## Deployment
+### GitHub Pages
+1. Push the `main` branch to GitHub.
+2. Repo → **Settings** → **Pages** → Source: *Deploy from a branch*.
+3. Branch: `main`, Folder: `/root`, then **Save**.
+4. Site published at `https://<username>.github.io/Blitzsaubeer-Project-1/`.
 
-### Services Page 
-![Screenshots of home page](assets/images/Screenshot-service-reservation-desktop.png)
-![Screenshots of home page](assets/images/Screenshot-service-reservation-mobile.png)
+### Notes on Forms
+- Front-end only. Submissions use **GET** to `thank-you.html`. No server-side data storage.
 
-### About Page 
-![Screenshots of home page](assets/images/Screenshot-carousel-desktop.png)
-![Screenshots of home page](assets/images/screenshot-carousel-mobile.png)
+## Local Development
+### Prerequisites
+- Modern browser
 
-### FAQ page 
-![Screenshots of home page](assets/images/Screenshot-faq-form-mobile.png)
-![Screenshots of home page](assets/images/Screenshot-faq-form-desktop.png)
-
-
-### Confirmation page
-![Screenshots of Confirmation page](assets/images/confirmation-small.png)
-![Screenshots of Confirmation page](assets/images/confirmation-big.png)
-
-## Resubmission Notes
-- Fix: removed diacritics from filenames/links (uber.html, datenschutzerklaerung.html).
-- Fix: forms point to thank-you.html (GET); added thank-you.html page.
-- A11y: labels/aria for selects, aria-hidden on decorative icons, table caption/scope, visible :focus styles.
-- Docs: README expanded with Deployment (GitHub Pages) & Testing; W3C HTML/CSS validation screenshots added.
+### Clone & Run
+- git clone https://github.com/Sori678/Blitzsaubeer-Project-1.git
+- cd Blitzsaubeer-Project-1
 
