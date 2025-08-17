@@ -151,3 +151,15 @@ Gather client contact details for communication
 ### FAQ page 
 ![Screenshots of home page](assets/images/Screenshot-faq-form-mobile.png)
 ![Screenshots of home page](assets/images/Screenshot-faq-form-desktop.png)
+
+
+### Confirmation page
+![Screenshots of Confirmation page](assets/images/confirmation-small.png)
+![Screenshots of Confirmation page](assets/images/confirmation-big.png)
+
+## Resubmission Notes
+- Fix: removed diacritics from filenames/links (uber.html, datenschutzerklaerung.html).
+- Fix: forms point to thank-you.html (GET); added thank-you.html page.
+- A11y: labels/aria for selects, aria-hidden on decorative icons, table caption/scope, visible :focus styles.
+- Docs: README expanded with Deployment (GitHub Pages) & Testing; W3C HTML/CSS validation screenshots added.
+
