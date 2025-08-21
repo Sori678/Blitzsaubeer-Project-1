@@ -258,7 +258,7 @@ summary::-webkit-details-marker {
   margin: 0;
   padding-left: 3px;
 }
-/* corecție: fără width:100% pe celule */
+
 .table th, .table td { width: auto; }
 
 /* Form Section */
@@ -344,7 +344,7 @@ select#monatspaket:invalid {
   visibility: visible;
 }
 
-/* Privacy / Impressum (o singură variantă, fără dubluri) */
+/* Privacy / Impressum  */
 #datenschutzerklärung,
 #impressum {
   display: grid;
